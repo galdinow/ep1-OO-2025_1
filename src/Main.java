@@ -1,15 +1,16 @@
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        // ter certeza de que o codigo funciona em outro computador
+        // verificar a versao do java utilizada
+        // ter um metodo para criar um diretorio para as disciplinas
         Scanner leitor = new Scanner(System.in);
         ArrayList<Disciplina> listaDisciplinas = new ArrayList<>();
         Disciplina.iniciarDisciplina(listaDisciplinas);
         while (true){
 
             System.out.println("""
-                    ANTES DE CADASTRAR UM ALUNO, CADASTRE UMA DISCIPLINA!
                     Qual modo deseja escolher?
                     1 - Modo aluno
                     2 - Modo Disciplina
