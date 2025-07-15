@@ -11,7 +11,8 @@ public class Menu {
                         2- Ver alunos cadastrados
                         """);
         //Codigo quebra quando nenhuma opcao eh selecionada CORRIGIR ANTES DE MANDAR
-        Integer modoAluno = leitor.nextInt();
+        // verificar se existe uma disciplinas criada antes
+        int modoAluno = leitor.nextInt();
         leitor.useDelimiter(System.lineSeparator());
         if (modoAluno == 1){
             //verificar se o nome ja existe no banco de dados
