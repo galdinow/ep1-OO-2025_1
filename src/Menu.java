@@ -49,6 +49,10 @@ public class Menu {
                 listaDisciplinas.get(escolhaDisciplina).matricularAluno(aluno1);
             }
         }
+
+        // Lista todos os alunos no sistema
+        // Talvez seria bom dar uma opcao de fazer isso por disciplina
+        //organizar em ordem alfabetica
         if (modoAluno == 2){
             ArrayList<Aluno> alunos = Aluno.listarAlunos("listaluno.csv");
             for(Aluno i : alunos){
