@@ -27,15 +27,27 @@ public class Menu {
 
             Aluno aluno1 = new Aluno(nomeAluno, matriculaAluno, cursoAluno );
             Aluno.salvarAluno(aluno1, "listaluno.csv");
-            //adicionar sistema de contador para as disciplinas terem numeros
-            int cont = 1;
-            for(Disciplina i : listaDisciplinas){
-                i.formatado(cont);
-                cont++;
+
+            // Pergunta ao usuario se ele quer ou nao cadastrar o aluno em uma disciplina
+            System.out.println("Deseja cadastrar o aluno em alguma disciplina?");
+            System.out.println("Digite 1 para sim e 0 para nao");
+
+            // Valida o input do usuario
+            int cadastro_disciplina;
+            do {
+                cadastro_disciplina = leitor.nextInt();
             }
-            System.out.println("Selecione a disciplina que quer matricula-lo:");
-            int escolhaDisciplina = leitor.nextInt() - 1;
-            listaDisciplinas.get(escolhaDisciplina).matricularAluno(aluno1);
+            while (cadastro_disciplina != 1 && cadastro_disciplina != 0);
+            if (cadastro_disciplina == 1) {
+                int cont = 1;
+                for (Disciplina i : listaDisciplinas) {
+                    i.formatado(cont);
+                    cont++;
+                }
+                System.out.println("Selecione a disciplina que quer matricula-lo:");
+                int escolhaDisciplina = leitor.nextInt() - 1;
+                listaDisciplinas.get(escolhaDisciplina).matricularAluno(aluno1);
+            }
         }
         if (modoAluno == 2){
             ArrayList<Aluno> alunos = Aluno.listarAlunos("listaluno.csv");
