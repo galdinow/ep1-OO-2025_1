@@ -89,7 +89,7 @@ public class Menu {
             String nomeProfessor = leitor.next();
 
             System.out.println("digite a quantidade de vagas disponiveis na diciplina");
-            Integer vagasDisponiveis = leitor.nextInt();
+            int vagasDisponiveis = leitor.nextInt();
 
 
             Disciplina disciplina = new Disciplina(nomeDisciplina, codigoDisciplina,vagasDisponiveis,nomeProfessor,listaMatriculados);
